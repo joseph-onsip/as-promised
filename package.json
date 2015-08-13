@@ -2,9 +2,11 @@
   "name": "as-promised",
   "version": "1.0.0",
   "description": "Decorates a function to accept and return Promises.",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel --out-dir lib src",
+    "prepublish": "npm run build",
+    "test": "cd test && babel index.js | node -- -"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/joseph-onsip/as-promised/issues"
   },
-  "homepage": "https://github.com/joseph-onsip/as-promised"
+  "homepage": "https://github.com/joseph-onsip/as-promised",
+  "dependencies": {
+    "deep-resolve": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "native-promise-only": "^0.8.1",
+    "tape": "^4.1.0"
+  }
 }
