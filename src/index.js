@@ -1,3 +1,8 @@
 import deepResolve from 'deep-resolve'
 
-export default (f) => (...args) => deepResolve(args).then((args) => f(...args))
+export default (f) => (
+  function (...args) {
+    return deepResolve([this, args])
+      .then(thisArgs => f.apply(...thisArgs))
+  }
+)
