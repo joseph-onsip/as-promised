@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Decorates a function to accept and return Promises.",
   "main": "./lib",
+  "browser": "./src",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "scripts": {
     "build": "babel --out-dir lib src",
     "prepublish": "npm run build",
@@ -19,6 +25,7 @@
   },
   "homepage": "https://github.com/joseph-onsip/as-promised",
   "dependencies": {
+    "babelify": "^6.1.3",
     "deep-resolve": "^2.0.0"
   },
   "devDependencies": {
