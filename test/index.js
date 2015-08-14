@@ -16,3 +16,4 @@ check('no arguments', [], []);
 check('promise argument', ['v'], [Promise.resolve('v')]);
 check('multiple arguments', [1, 'v'], [1, Promise.resolve('v')]);
 check('object containing a promise', [{k: 'v'}], [{k: Promise.resolve('v')}]);
+check('Promised this', [], [], 'v', Promise.resolve('v'));
