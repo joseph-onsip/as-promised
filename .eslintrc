@@ -1,0 +1,10 @@
+{
+  "ecmaFeatures": {
+    "modules": true,
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "destructuring": true,
+    "restParams": true,
+    "spread": true,
+  }
+}
