@@ -1,6 +1,6 @@
 {
   "name": "as-promised",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Decorates a function to accept and return Promises.",
   "main": "./lib",
   "scripts": {
